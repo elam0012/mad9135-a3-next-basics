@@ -4,7 +4,7 @@ export default function Projects({projects}) {
   return(
     <div>
       <h1>Projects List</h1>
-      <ul>
+      <ul className="projects">
         {projects.map((project) => (
           <li key={project.id}>
             <Link href={"/projects/" + project.id}>{project.title}</Link>

@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <div>
-      <p>This is Footer</p>
-    </div>
+      <footer>
+        <p>All Rights Reserved @ 2022</p>
+      </footer>
   );
 }
 

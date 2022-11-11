@@ -1,12 +1,13 @@
 import '../styles/globals.css'
 import Layout from '../components/layout'
+import {useTeam, TeamProvider} from "../Context/teamContext"
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <TeamProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </TeamProvider>
     ) 
 }
-
-export default MyApp

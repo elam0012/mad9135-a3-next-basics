@@ -1,34 +1,29 @@
-
 import Image from "next/image";
+import {useTeam} from "../../Context/teamContext"
 
-export default function Team({team}) {
+export default function Team() {
+  const [team, setTeam] = useTeam();
   return(
     <div>
       <h1>Team Members</h1>
-      <ul>
+      <ul className="card-container">
         {team.map((member) => (
-          <div>
-            <p>{member.id}</p>
-            <p>{member.age}</p>
-            <p>{member.gender}</p>
+          <div className="card">
+            <div className="card-image">
             <Image
               src= {member.avatar}
               height={150}
               width={150}
               alt="Profile Pic"/>
+            </div>
+            <div className="card-text">
+              <p>Name: {member.name}</p>
+              <p>Age: {member.age}</p>
+              <p>Gender: {member.gender}</p>
+            </div>
           </div>
         ))}
       </ul>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  const resp = await fetch("http://localhost:3000/api/team");
-  const data = await resp.json();
-  return {
-    props: {
-      team: data
-    },
-  };
 }

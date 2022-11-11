@@ -1,11 +1,12 @@
+import Link from "next/link";
+
 export default function Details({project}) {
-  console.log("yasir", project)
   return(
-    <div>
+    <div className="project-details">
       <h1>Project Details</h1>
-      <p>{project.userId}</p>
-      <p>{project.id}</p>
-      <p>{project.title}</p>
+      <p>Project ID: {project.id}</p>
+      <p>Project Title: {project.title}</p>
+      <Link href="/projects" className="back">Click to Go Back</Link>
     </div>
   )
 }

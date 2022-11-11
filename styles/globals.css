@@ -1,26 +1,91 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  font-family: "Nunito";
 }
 
 a {
-  color: inherit;
+  color: #333;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.content {
+  width: 85%;
+  margin: 0 auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  margin-left: 12px;
+}
+
+nav .logo {
+  margin-right: auto;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  color: #777;
+  border-top: 1px solid #eaeaea;
+}
+
+.card{
+  display: flex;
+  margin-bottom: 1rem;
+  border: 1px rgb(210, 207, 207) solid;
+  min-width: 20rem;
+  width: 25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 150px;
+}
+
+.card-text {
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-image {
+  height: 150px;
+}
+
+.card-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-details{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.header-nav{
+  display: flex;
+}
+
+.logo{
+  margin-right: auto;
+}
+
+.back{
+  color: red;
+}
+
+.projects{
+  font-size: 1.2rem;
+  font-weight: bold;
 }
