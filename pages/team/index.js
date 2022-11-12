@@ -8,7 +8,7 @@ export default function Team() {
       <h1>Team Members</h1>
       <ul className="card-container">
         {team.map((member) => (
-          <div className="card">
+          <div key={member.id} className="card">
             <div className="card-image">
             <Image
               src= {member.avatar}
