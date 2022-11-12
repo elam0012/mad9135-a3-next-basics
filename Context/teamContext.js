@@ -11,13 +11,13 @@ function TeamProvider(props) {
       .then(data=>{setTeam(data);})
   }, []);
 
-  return <TeamContext.Provider value={[team, setTeam]} {...props} />;
+  return <TeamContext.Provider value={[team]} {...props} />;
 }
 
 function useTeam() {
   const context = useContext(TeamContext);
   if (!context) throw new Error('Not inside the Provider');
-  return context; // [team, setTeam]
+  return context; // [team]
 }
 
 export { useTeam, TeamProvider };
